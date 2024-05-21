@@ -1,0 +1,189 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <title>Валюта</title>
+    <link rel='stylesheet' href='index.css'>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.4.1/dist/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+    <link rel='icon' href='valuta.png'>
+  </head>
+  <body>
+
+<div class="container py-3">
+    <div class="d-flex flex-column flex-md-row align-items-center pb-3 mb-4 border-bottom">
+        <nav class="d-inline-flex mt-2 mt-md-0 ms-md-auto">
+            <img src='valuta.png' width=5% height=5%>
+        </nav>
+    </div>
+    <div class="pricing-header p-3 pb-md-4 mx-auto text-center">
+      <h1 class="display-4 fw-normal">Курс валют</h1>
+    </div>
+
+    <div class="row row-cols-1 row-cols-md-3 mb-3 text-center">
+      <div class="col">
+        <div class="card mb-4 rounded-3 shadow-sm">
+          <div class="card-header py-3">
+            <h4 class="my-0 fw-normal">Армянский драм ֏</h4>
+          </div>
+          <div class="card-body">
+              <h1 class="card-title pricing-card-title"><p id='amd'></p><small class="text-muted fw-light"> руб</small></h1>
+          </div>
+        </div>
+      </div>
+      <div class="col">
+        <div class="card mb-4 rounded-3 shadow-sm">
+          <div class="card-header py-3">
+            <h4 class="my-0 fw-normal">Доллар США $</h4>
+          </div>
+          <div class="card-body">
+              <h1 class="card-title pricing-card-title"><p id='usd'></p><small class="text-muted fw-light"> руб</small></h1>
+          </div>
+        </div>
+      </div>
+      <div class="col">
+        <div class="card mb-4 rounded-3 shadow-sm">
+          <div class="card-header py-3">
+            <h4 class="my-0 fw-normal">Евро €</h4>
+          </div>
+          <div class="card-body">
+              <h1 class="card-title pricing-card-title"><p id='eur'></p><small class="text-muted fw-light"> руб</small></h1>
+          </div>
+        </div>
+      </div>
+        <div class="col">
+        <div class="card mb-4 rounded-3 shadow-sm">
+          <div class="card-header py-3">
+            <h4 class="my-0 fw-normal">Фунт Стерлингов £</h4>
+          </div>
+          <div class="card-body">
+              <h1 class="card-title pricing-card-title"><p id='gbp'></p><small class="text-muted fw-light"> руб</small></h1>
+          </div>
+        </div>
+      </div>
+    <div class="col">
+        <div class="card mb-4 rounded-3 shadow-sm">
+          <div class="card-header py-3">
+            <h4 class="my-0 fw-normal">Китайский юань ¥</h4>
+          </div>
+          <div class="card-body">
+              <h1 class="card-title pricing-card-title"><p id='cny'></p><small class="text-muted fw-light"> руб</small></h1>
+          </div>
+        </div>
+      </div>
+    <div class="col">
+        <div class="card mb-4 rounded-3 shadow-sm">
+          <div class="card-header py-3">
+            <h4 class="my-0 fw-normal">Японская иена ¥</h4>
+          </div>
+          <div class="card-body">
+              <h1 class="card-title pricing-card-title"><p id='jpy'></p><small class="text-muted fw-light"> руб</small></h1>
+          </div>
+        </div>
+      </div>
+    </div>
+</div>
+              
+<div class='form'>    
+    <h1 class='card_title'>Конвертация валют</h1>
+    <input type='text' id='input1' class='input1' list='input_from' placeholder='Начальная валюта'>
+    <datalist id='input_from'>
+        <option>Австралийский доллар</option>
+        <option>Азербайджанский манат</option>
+        <option>Фунт стерлингов Соединенного королевства</option>
+        <option>Армянских драмов</option>
+        <option>Белорусский рубль</option>
+        <option>Болгарский лев</option>
+        <option>Бразильский реал</option>
+        <option>Венгерских форинтов	</option>
+        <option>Вьетнамских донгов</option>
+        <option>Гонконгский доллар</option>
+        <option>Грузинский лари</option>
+        <option>Датская крона</option>
+        <option>Дирхам ОАЭ</option>
+        <option>Доллар США</option>
+        <option>Евро</option>
+        <option>Египетских фунтов</option>	
+        <option>Индийских рупий</option>
+        <option>Индонезийских рупий</option>
+        <option>Казахстанских тенге</option>
+        <option>Канадский доллар</option>
+        <option>Катарский риал</option>
+        <option>Киргизских сомов</option>
+        <option>Китайский юань</option>
+        <option>Молдавских леев</option>
+        <option>Новозеландский доллар</option>
+        <option>Норвежских крон</option>
+        <option>Польский злотый</option>
+        <option>Российский рубль</option>
+        <option>Румынский лей</option>
+        <option>СДР (специальные права заимствования)</option>	
+        <option>Сингапурский доллар	</option>
+        <option>Таджикских сомони</option>
+        <option>Таиландских батов</option>
+        <option>Турецких лир</option>
+        <option>Новый туркменский манат</option>	
+        <option>Узбекских сумов</option>
+        <option>Украинских гривен</option>
+        <option>Чешских крон	</option>
+        <option>Шведских крон</option>
+        <option>Швейцарский франк</option>
+        <option>Сербских динаров</option>
+        <option>Южноафриканских рэндов</option>	
+        <option>Вон Республики Корея</option>
+        <option>Японских иен</option>
+    </datalist>
+    <input type='text' id='num' class='num' placeholder='Начальная сумма'>
+    <input type='text' id='input2' class='input2' list='input_to' placeholder='Итоговая валюта'>
+    <datalist id='input_to'>
+        <option>Австралийский доллар</option>
+        <option>Азербайджанский манат</option>
+        <option>Фунт стерлингов Соединенного королевства</option>
+        <option>Армянских драмов</option>
+        <option>Белорусский рубль</option>
+        <option>Болгарский лев</option>
+        <option>Бразильский реал</option>
+        <option>Венгерских форинтов	</option>
+        <option>Вьетнамских донгов</option>
+        <option>Гонконгский доллар</option>
+        <option>Грузинский лари</option>
+        <option>Датская крона</option>
+        <option>Дирхам ОАЭ</option>
+        <option>Доллар США</option>
+        <option>Евро</option>
+        <option>Египетских фунтов</option>	
+        <option>Индийских рупий</option>
+        <option>Индонезийских рупий</option>
+        <option>Казахстанских тенге</option>
+        <option>Канадский доллар</option>
+        <option>Катарский риал</option>
+        <option>Киргизских сомов</option>
+        <option>Китайский юань</option>
+        <option>Молдавских леев</option>
+        <option>Новозеландский доллар</option>
+        <option>Норвежских крон</option>
+        <option>Польский злотый</option>
+        <option>Российский рубль</option>
+        <option>Румынский лей</option>
+        <option>СДР (специальные права заимствования)</option>	
+        <option>Сингапурский доллар	</option>
+        <option>Таджикских сомони</option>
+        <option>Таиландских батов</option>
+        <option>Турецких лир</option>
+        <option>Новый туркменский манат</option>	
+        <option>Узбекских сумов</option>
+        <option>Украинских гривен</option>
+        <option>Чешских крон	</option>
+        <option>Шведских крон</option>
+        <option>Швейцарский франк</option>
+        <option>Сербских динаров</option>
+        <option>Южноафриканских рэндов</option>	
+        <option>Вон Республики Корея</option>
+        <option>Японских иен</option>
+    </datalist>     
+    <p id = "res" class='res'></p>
+    <input value='⇄' type='button' onclick = 'Function()' class='button'>
+</div>
+      
+<script src='./index.js'></script>
+</body>
+</html
